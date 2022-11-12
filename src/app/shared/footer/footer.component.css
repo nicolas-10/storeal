@@ -1,0 +1,32 @@
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    background: #ffd3d8;
+    width: 100%;    
+}
+
+.footer-container a{
+    color: #131313;
+}
+.top-item,.bottom-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-item span{
+    color: #F9263F;
+}
+.top-item a{
+    margin-right: 20px;
+}
+.bottom-item ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom-item ul li{
+    margin: 20px;
+}
+.bottom-item ul li a{
+    color: #F9263F;
+}

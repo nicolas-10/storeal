@@ -1,0 +1,16 @@
+<div class="container" *ngIf="product">
+    <a routerLink="/sellers" class="m-4 badge bg-dark" style="font-size:1rem;">Retour</a>
+    <div class="row">
+    <div class="col-md-6">
+        <img class="img-thumbnail mt-4" [src]="product.picture" alt={{product.name}} style=" width:300px; height: 300px;">
+       <div class="d-flex"> <p class="m-2">{{product.name}}</p><p class="m-2">{{product.price}}$</p></div>
+    </div>
+    <div class="col-md-6 mt-4">
+        <p>Information du vendeur</p>
+        <h1>{{product.seller.name}}</h1>
+        <p class="text-danger">Renter en contact !!!</p>
+        <span class="fs-4">Contact: </span><a [href]="whatsappApiUrl+product.seller.telephone+'&text=salut bro' " target = "_blank" class="badge bg-dark text-decoration-none fs-4">+{{product.seller.telephone}}</a>
+    </div>
+    </div>
+
+</div>

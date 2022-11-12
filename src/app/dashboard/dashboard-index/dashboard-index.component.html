@@ -1,0 +1,23 @@
+<a class="btn btn-success m-2" routerLink="/dashboard/addProduct">Ajouter</a>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <th scope="row">{{product.id}}</th>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}£</td>
+        <td>{{product.description}}</td>
+        <td>
+            <a class="btn btn-danger m-2" (click)="deleteProduct(product)">delete</a>
+            <a class="btn btn-warning m-2" (click)="goToEdit(product)">update</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>

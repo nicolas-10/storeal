@@ -1,0 +1,15 @@
+<h1 style="text-align:center;" class="text-dark mb-3">Product List</h1>
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 mb-3"  style="cursor:pointer;">
+        <div class="col"  *ngFor="let product of products">
+            <div class="card mb-4 rounded-3 shadow-sm" style="width:18rem;" (click)="goToDetailProduct(product)" >
+                <img style="height: 18rem;" class="card-img-top" [src]="product.picture" alt="">
+                <div class="card-body">
+                    <span class="d-flex">Produit : <p>{{product.name}}</p> </span>
+                    <span class="d-flex">Prix: <p>{{product.price}}$</p></span>
+                </div>
+             </div>
+        </div>
+    </div>
+   
+</div>
